@@ -1,4 +1,4 @@
-// 星火笔记 - Creator Panel (Left side of editor)
+﻿// 星火笔记 - Creator Panel (Left side of editor)
 import { useContentStore } from '../stores/content.js';
 import { useSettingsStore } from '../stores/settings.js';
 import { useUiStore } from '../stores/ui.js';
@@ -88,7 +88,8 @@ export const CreatorPanel = {
     return {
       content, settings, ui, topic, style, audience, keywords,
       selectedTemplateId, showAdvanced, newTagInput, rawStream,
-      platformTypes, generate, selectTitle, addTag, removeTag, addSuggestedTag, icons
+      platformTypes, generate, selectTitle, addTag, removeTag, addSuggestedTag, icons,
+      promptImageUrl() { const url = prompt("请输入图片 URL:"); if (url && url.trim()) content.currentImages.push(url.trim()); }
     };
   },
   template: `
