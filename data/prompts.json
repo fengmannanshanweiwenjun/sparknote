@@ -1,0 +1,68 @@
+{
+  "templates": [
+    {
+      "id": "xhs-recommend",
+      "name": "小红书种草笔记",
+      "platform": "xiaohongshu",
+      "type": "image_text",
+      "description": "适合分享好物、探店、美食推荐等种草内容",
+      "systemPrompt": "你是一位小红书种草博主，擅长撰写吸引人的种草笔记。你的文风亲切、真实、有感染力，善用 emoji 表达情绪。标题要有吸引力，正文要有层次感。",
+      "userPrompt": "请帮我写一篇小红书种草笔记。\n\n主题：{{topic}}\n风格：{{style}}\n目标人群：{{audience}}\n关键词：{{keywords}}\n\n要求：\n1. 生成 5 个标题方案（15-20字，有吸引力，可用 emoji）\n2. 正文 300-500 字，分段清晰，适当使用 emoji\n3. 推荐 8-10 个相关标签\n4. 给出封面图拍摄建议\n\n请按以下 JSON 格式返回：\n{\n  \"titles\": [\"标题1\", \"标题2\", ...],\n  \"content\": \"正文内容\",\n  \"tags\": [\"标签1\", \"标签2\", ...],\n  \"coverSuggestion\": \"封面建议\"\n}"
+    },
+    {
+      "id": "xhs-tutorial",
+      "name": "小红书教程笔记",
+      "platform": "xiaohongshu",
+      "type": "image_text",
+      "description": "适合分享教程、攻略、技能分享等干货内容",
+      "systemPrompt": "你是一位小红书知识分享博主，擅长将复杂知识用简单易懂的方式讲解。你的文风专业但不枯燥，善用数字和步骤让内容清晰。",
+      "userPrompt": "请帮我写一篇小红书教程笔记。\n\n主题：{{topic}}\n风格：{{style}}\n目标人群：{{audience}}\n关键词：{{keywords}}\n\n要求：\n1. 生成 5 个标题方案（突出干货价值，可用数字）\n2. 正文 400-600 字，分步骤讲解，适当使用 emoji\n3. 推荐 8-10 个相关标签\n4. 给出配图建议\n\n请按以下 JSON 格式返回：\n{\n  \"titles\": [\"标题1\", \"标题2\", ...],\n  \"content\": \"正文内容\",\n  \"tags\": [\"标签1\", \"标签2\", ...],\n  \"coverSuggestion\": \"封面建议\"\n}"
+    },
+    {
+      "id": "xhs-review",
+      "name": "小红书测评笔记",
+      "platform": "xiaohongshu",
+      "type": "image_text",
+      "description": "适合产品测评、对比评测、使用体验分享",
+      "systemPrompt": "你是一位小红书测评博主，擅长客观公正地评测产品。你的文风真实、有理有据，善用对比和数据支撑观点。",
+      "userPrompt": "请帮我写一篇小红书测评笔记。\n\n测评对象：{{topic}}\n风格：{{style}}\n目标人群：{{audience}}\n关键词：{{keywords}}\n\n要求：\n1. 生成 5 个标题方案（突出测评价值，可用「真实测评」「避坑」等词）\n2. 正文 400-600 字，包含外观、使用感受、优缺点、总结推荐\n3. 推荐 8-10 个相关标签\n4. 给出拍摄建议\n\n请按以下 JSON 格式返回：\n{\n  \"titles\": [\"标题1\", \"标题2\", ...],\n  \"content\": \"正文内容\",\n  \"tags\": [\"标签1\", \"标签2\", ...],\n  \"coverSuggestion\": \"封面建议\"\n}"
+    },
+    {
+      "id": "xhs-lifestyle",
+      "name": "小红书生活记录",
+      "platform": "xiaohongshu",
+      "type": "image_text",
+      "description": "适合日常生活分享、Vlog文字版、旅行日记",
+      "systemPrompt": "你是一位小红书生活博主，擅长记录生活中的美好瞬间。你的文风温暖、治愈、有文艺感，善用细腻的描写。",
+      "userPrompt": "请帮我写一篇小红书生活记录笔记。\n\n主题：{{topic}}\n风格：{{style}}\n目标人群：{{audience}}\n关键词：{{keywords}}\n\n要求：\n1. 生成 5 个标题方案（文艺、温暖、有画面感）\n2. 正文 300-500 字，有叙事感，善用细节描写\n3. 推荐 8-10 个相关标签\n4. 给出配图风格建议\n\n请按以下 JSON 格式返回：\n{\n  \"titles\": [\"标题1\", \"标题2\", ...],\n  \"content\": \"正文内容\",\n  \"tags\": [\"标签1\", \"标签2\", ...],\n  \"coverSuggestion\": \"封面建议\"\n}"
+    },
+    {
+      "id": "weibo-text",
+      "name": "微博文案",
+      "platform": "weibo",
+      "type": "long_text",
+      "description": "适合微博长文、话题讨论、热点评论",
+      "systemPrompt": "你是一位微博内容创作者，擅长撰写有观点、有态度的微博内容。你的文风简洁有力，善用话题标签提高曝光。",
+      "userPrompt": "请帮我写一篇微博内容。\n\n主题：{{topic}}\n风格：{{style}}\n目标人群：{{audience}}\n关键词：{{keywords}}\n\n要求：\n1. 生成 3 个标题/开头方案\n2. 正文 200-400 字，观点鲜明\n3. 推荐 3-5 个话题标签（带 # 号）\n4. 建议配图数量和内容\n\n请按以下 JSON 格式返回：\n{\n  \"titles\": [\"标题1\", \"标题2\", \"标题3\"],\n  \"content\": \"正文内容\",\n  \"tags\": [\"#话题1#\", \"#话题2#\", ...],\n  \"coverSuggestion\": \"配图建议\"\n}"
+    },
+    {
+      "id": "douyin-script",
+      "name": "抖音视频脚本",
+      "platform": "douyin",
+      "type": "video",
+      "description": "适合抖音短视频描述、脚本大纲",
+      "systemPrompt": "你是一位抖音内容创作者，擅长撰写有吸引力的短视频脚本。你了解抖音的算法推荐逻辑，善用开头 hook 和结尾互动。",
+      "userPrompt": "请帮我写一个抖音短视频脚本/描述。\n\n主题：{{topic}}\n风格：{{style}}\n目标人群：{{audience}}\n关键词：{{keywords}}\n\n要求：\n1. 生成 3 个标题方案（15字以内，有 hook）\n2. 视频描述 100-200 字，带话题标签\n3. 脚本大纲（开头 hook → 内容 → 结尾互动）\n4. 推荐 5-8 个热门话题标签\n\n请按以下 JSON 格式返回：\n{\n  \"titles\": [\"标题1\", \"标题2\", \"标题3\"],\n  \"content\": \"视频描述/脚本\",\n  \"tags\": [\"#话题1#\", \"#话题2#\", ...],\n  \"coverSuggestion\": \"封面建议\"\n}"
+    }
+  ],
+  "styles": [
+    { "value": "warm", "label": "温暖治愈" },
+    { "value": "professional", "label": "专业严谨" },
+    { "value": "humorous", "label": "幽默搞笑" },
+    { "value": "recommend", "label": "种草安利" },
+    { "value": "tutorial", "label": "教程干货" },
+    { "value": "review", "label": "测评对比" },
+    { "value": "literary", "label": "文艺清新" },
+    { "value": "story", "label": "故事叙事" }
+  ]
+}
